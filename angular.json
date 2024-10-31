@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-quickstart": {
+    "2.0-Website-Breaker": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-quickstart",
+            "outputPath": "dist/2.0-Website-Breaker",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -69,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "angular-quickstart:build:production"
+              "browserTarget": "2.0-Website-Breaker:build:production"
             },
             "development": {
-              "browserTarget": "angular-quickstart:build:development"
+              "browserTarget": "2.0-Website-Breaker:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -80,7 +80,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-quickstart:build"
+            "browserTarget": "2.0-Website-Breaker:build"
           }
         },
         "test": {
@@ -103,5 +103,5 @@
       }
     }
   },
-  "defaultProject": "angular-quickstart"
+  "defaultProject": "2.0-Website-Breaker"
 }
