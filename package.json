@@ -1,6 +1,8 @@
 {
-  "name": "2.0-Website-Breaker",
-  "version": "0.0.0",
+  "name": "2.0-website-breaker",
+  "version": "1.0.0",
+  "description": "replicating server file structure on my computer",
+  "main": "karma.conf.js",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -8,10 +10,10 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "build:babel": "babel src --out-dir dist --extensions \".ts,.tsx,.js,.jsx\"",
-    "test:types": "tsc --noEmit",
     "test:size": "bundlesize"
   },
-  "private": true,
+  "author": "oc-2",
+  "license": "ISC",
   "dependencies": {
     "@angular/animations": "^18.2.12",
     "@angular/common": "^18.2.12",
@@ -47,5 +49,13 @@
     "karma-jasmine-html-reporter": "~1.7.0",
     "netlify-plugin-cypress": "~2.2.1",
     "typescript": "^5.5.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oc-2/2.0-Website-Breaker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/oc-2/2.0-Website-Breaker/issues"
+  },
+  "homepage": "https://github.com/oc-2/2.0-Website-Breaker#readme"
 }
