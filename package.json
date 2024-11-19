@@ -1,7 +1,7 @@
 {
-  "name": "2.0-website-breaker",
+  "name": "2.0-Website-Breaker",
   "version": "1.0.0",
-  "description": "replicating server file structure on my computer",
+  "description": "https://website-breaker.netlify.app/",
   "main": "karma.conf.js",
   "scripts": {
     "ng": "ng",
