@@ -22,4 +22,4 @@ jobs:
           git pull origin typescriptversion5.4.0
           git add .
           git commit -m "fix: package.json & package-lock.json to reduce vulnerabilities" --allow-empty
-          git push origin HEAD:typescriptversion5.4.0
+          git push origin HEAD:typescriptversion5.4.0 --force
