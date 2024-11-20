@@ -2,10 +2,7 @@ name: Set up Algolia
 
 on:
   push:
-    branches:
-      - main
-      - typescriptversion5.4.0
-
+    branches: ["*"]
 jobs:
   set-up-algolia:
     runs-on: ubuntu-latest
