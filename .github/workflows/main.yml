@@ -1,0 +1,24 @@
+name: Set up Algolia
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  set-up-algolia:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+      - run: npm uninstall karma-webpack karma-phantomjs-launcher karma-jasmine karma jasmine-core awesome typescript-loader @types/jasmine
+      - name: Commit and Push
+        run: |
+          git config --global user.name "snyk-bot"
+          git config --global user.email "snyk-bot@snyk.io"
+          git add .
+          git commit -m "fix: package.json & package-lock.json" --allow-empty
+          git push origin HEAD:master
