@@ -1,5 +1,5 @@
 {
-  "name": "2.0-Website-Breaker",
+  "name": "@oc-2/2.0-Website-Breaker",
   "version": "1.0.0",
   "description": "https://website-breaker.netlify.app/",
   "main": "karma.conf.js",
@@ -28,7 +28,7 @@
     "preact": "^10.24.3",
     "rxjs": "^7.8.1",
     "tslib": "^2.3.0",
-    "2.0-Website-Breaker": "../../"
+    "@oc-2/website-breaker": "../../",
     "zone.js": "^0.15.0"
   },
   "devDependencies": {

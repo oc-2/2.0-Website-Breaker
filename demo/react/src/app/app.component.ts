@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import breakWebPage from '2.0-Website-Breaker';
+import breakWebPage from '@oc-2/website-breaker';
 
 @Component({
   selector: 'app-root',

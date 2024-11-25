@@ -1,6 +1,6 @@
 {
-  "name": "2.0-Website-Breaker",
-  "version": "1.0.3",
+  "name": "@oc-2/website-breaker",
+  "version": "1.0.0",
   "description": "",
   "main": "build/main/lib/index.js",
   "scripts": {
