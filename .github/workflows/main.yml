@@ -22,4 +22,4 @@ jobs:
           git config --global user.email "snyk-bot@snyk.io"
           git add .
           git commit -m "fix: package.json & package-lock.json to reduce vulnerabilities" --allow-empty
-          git push origin HEAD:main
+          git push origin HEAD:master
