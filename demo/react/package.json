@@ -1,6 +1,6 @@
 {
-  "name": "@oc-2/2.0-Website-Breaker",
-  "version": "1.0.0",
+  "name": "@oc-2/website-Breaker",
+  "version": "1.0.3",
   "description": "https://website-breaker.netlify.app/",
   "main": "karma.conf.js",
   "scripts": {
