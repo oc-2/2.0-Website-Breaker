@@ -1,5 +1,5 @@
 modules = ["nodejs-20", "web"]
-run = "tsc"
+run = "npm run build:bundle"
 
 [nix]
 channel = "stable-24_05"
