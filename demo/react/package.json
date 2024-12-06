@@ -10,6 +10,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "build:babel": "babel src --out-dir dist --extensions \".ts,.tsx,.js,.jsx\"",
+    "build:cloudflare": "nvm install 18.19.1 && nvm use 18.19.1 && ng build"
     "test:size": "bundlesize"
   },
   "author": "oc-2",
