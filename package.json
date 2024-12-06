@@ -20,7 +20,7 @@
   "homepage": "https://github.com/oc-2/2.0-Website-Breaker#readme",
   "dependencies": {
     "html2canvas": "^1.4.1",
-    "matter-js": "^0.18.0"
+    "matter-js": "^0.20.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
