@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
-import breakWebPage from '@oc-2/website-breaker';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
+  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrl: './app.component.css'
 })
 export class AppComponent {
-  breakWebPage = breakWebPage;
+  title = 'website-breaker';
 }
