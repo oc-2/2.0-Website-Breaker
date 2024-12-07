@@ -1,7 +1,7 @@
 {
   "name": "@oc-2/website-breaker",
   "version": "1.0.4",
-  "description": "https://website-breaker.pages.dev/",
+  "description": "https://2-0-website-breaker.pages.dev/",
   "scripts": {
     "ng": "ng",
     "start": "npm run build && wrangler pages dev dist/cloudflare --compatibility-date=2024-12-05",
