@@ -16,7 +16,7 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "^19.0.0",
-    "@angular/common": "^19.0.4",
+    "@angular/common": "^19.0.5",
     "@angular/compiler": "^19.0.0",
     "@angular/core": "^19.0.0",
     "@angular/forms": "^19.0.4",
@@ -27,7 +27,7 @@
     "@angular/ssr": "^19.0.0",
     "@oc-2/website-breaker": "../../",
     "axios": "^1.7.8",
-    "preact": "^10.25.3",
+    "preact": "^10.25.4",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
