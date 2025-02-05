@@ -1,6 +1,6 @@
 {
   "name": "@oc-2/website-breaker",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "https://2-0-website-breaker.pages.dev/",
   "scripts": {
     "ng": "ng",
