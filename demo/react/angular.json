@@ -3,27 +3,27 @@
   "version": 1,
   "cli": {
     "packageManager": "npm",
-    "analytics": "d85d5cbd-61a0-47c9-b07d-443760ac2114"
+    "analytics": "b76dc8fc-de30-4ce9-9527-8ba44af7a021"
   },
   "newProjectRoot": "projects",
   "projects": {
     "website-breaker": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "sass"
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:application",
+          "builder": "@angular/build:application",
           "options": {
-            "outputPath": "dist",
-            "index": "src/index.html",
             "browser": "src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
             "tsConfig": "tsconfig.app.json",
+            "inlineStyleLanguage": "sass",
             "assets": [
               {
                 "glob": "**/*",
@@ -32,15 +32,15 @@
               "src/_routes.json"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.sass"
             ],
-            "scripts": [],
             "server": "src/main.server.ts",
             "outputMode": "server",
             "ssr": {
               "entry": "src/server.ts",
               "experimentalPlatform": "neutral"
-            }
+            },
+            "outputPath": "dist"
           },
           "configurations": {
             "production": {
@@ -67,7 +67,7 @@
           "defaultConfiguration": "production"
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
               "buildTarget": "website-breaker:build:production"
@@ -79,16 +79,13 @@
           "defaultConfiguration": "development"
         },
         "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n"
+          "builder": "@angular/build:extract-i18n"
         },
         "test": {
-          "builder": "@angular-devkit/build-angular:karma",
+          "builder": "@angular/build:karma",
           "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
             "tsConfig": "tsconfig.spec.json",
+            "inlineStyleLanguage": "sass",
             "assets": [
               {
                 "glob": "**/*",
@@ -96,9 +93,8 @@
               }
             ],
             "styles": [
-              "src/styles.css"
-            ],
-            "scripts": []
+              "src/styles.sass"
+            ]
           }
         }
       }

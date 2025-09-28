@@ -18,6 +18,14 @@
     "url": "https://github.com/oc-2/2.0-Website-Breaker/issues"
   },
   "homepage": "https://github.com/oc-2/2.0-Website-Breaker#readme",
+  "topics": [
+    "javascript",
+    "fun",
+    "angular",
+    "typescript",
+    "canvas",
+    "cloudflare"
+  ],
   "dependencies": {
     "html2canvas": "^1.4.1",
     "matter-js": "^0.20.0"
