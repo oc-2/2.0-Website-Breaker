@@ -35,7 +35,7 @@
 		"@angular/platform-server": "^20.3.0",
 		"@angular/router": "^20.3.0",
 		"@angular/ssr": "^20.3.0",
-    "@oc-2/website-breaker": "../../",
+        "@oc-2/website-breaker": "../../",
 		"rxjs": "~7.8.0",
 		"tslib": "^2.3.0"
 	},
@@ -55,12 +55,12 @@
 		"wrangler": "^4.40.2",
 		"xhr2": "^0.2.1"
 	},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/oc-2/2.0-Website-Breaker.git"
-  },
-  "bugs": {
-    "url": "https://github.com/oc-2/2.0-Website-Breaker/issues"
-  },
-  "homepage": "https://github.com/oc-2/2.0-Website-Breaker#readme"
-}
+  	"repository": {
+    	"type": "git",
+    	"url": "git+https://github.com/oc-2/2.0-Website-Breaker.git"
+ 	 },
+ 	 "bugs": {
+ 	   "url": "https://github.com/oc-2/2.0-Website-Breaker/issues"
+ 	 },
+ 	 "homepage": "https://github.com/oc-2/2.0-Website-Breaker#readme"
+	}
