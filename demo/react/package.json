@@ -7,7 +7,7 @@
 		"build": "ng build && npm run process",
 		"watch": "ng build --watch --configuration development",
 		"test": "ng test",
-    "test:size": "bundlesize",
+    	"test:size": "bundlesize",
 		"serve:ssr:website-breaker": "node dist/website-breaker/server/server.mjs",
 		"process": "node ./tools/copy-files.mjs",
 		"deploy": "npm run build && wrangler pages deploy",
