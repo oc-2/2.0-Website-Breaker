@@ -7,7 +7,6 @@
 		"build": "ng build && npm run process",
 		"watch": "ng build --watch --configuration development",
 		"test": "ng test",
-    	"test:size": "bundlesize",
 		"serve:ssr:website-breaker": "node dist/website-breaker/server/server.mjs",
 		"process": "node ./tools/copy-files.mjs",
 		"deploy": "npm run build && wrangler pages deploy",
@@ -34,14 +33,14 @@
 		"@angular/platform-browser": "^20.3.0",
 		"@angular/platform-server": "^20.3.0",
 		"@angular/router": "^20.3.0",
-		"@angular/ssr": "^20.3.0",
-        "@oc-2/website-breaker": "../../",
+		"@angular/ssr": "^20.3.3",
+		"@oc-2/website-breaker": "file:../../",
 		"rxjs": "~7.8.0",
 		"tslib": "^2.3.0"
 	},
 	"devDependencies": {
-		"@angular/build": "^20.3.0",
-		"@angular/cli": "^20.3.0",
+		"@angular/build": "^20.3.3",
+		"@angular/cli": "^20.3.3",
 		"@angular/compiler-cli": "^20.3.0",
 		"@types/jasmine": "~5.1.0",
 		"@types/node": "^20.17.19",
@@ -52,15 +51,7 @@
 		"karma-jasmine": "~5.1.0",
 		"karma-jasmine-html-reporter": "~2.1.0",
 		"typescript": "~5.9.2",
-		"wrangler": "^4.40.2",
+		"wrangler": "^4.42.0",
 		"xhr2": "^0.2.1"
-	},
-  	"repository": {
-    	"type": "git",
-    	"url": "git+https://github.com/oc-2/2.0-Website-Breaker.git"
- 	 },
- 	 "bugs": {
- 	   "url": "https://github.com/oc-2/2.0-Website-Breaker/issues"
- 	 },
- 	 "homepage": "https://github.com/oc-2/2.0-Website-Breaker#readme"
 	}
+}

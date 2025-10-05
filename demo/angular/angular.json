@@ -3,17 +3,13 @@
   "version": 1,
   "cli": {
     "packageManager": "npm",
-    "analytics": "b76dc8fc-de30-4ce9-9527-8ba44af7a021"
+    "analytics": "b429a3f2-a3c4-44c8-8fa8-4dd243c38d0a"
   },
   "newProjectRoot": "projects",
   "projects": {
     "website-breaker": {
       "projectType": "application",
-      "schematics": {
-        "@schematics/angular:component": {
-          "style": "sass"
-        }
-      },
+      "schematics": {},
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -23,7 +19,6 @@
           "options": {
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
-            "inlineStyleLanguage": "sass",
             "assets": [
               {
                 "glob": "**/*",
@@ -32,7 +27,7 @@
               "src/_routes.json"
             ],
             "styles": [
-              "src/styles.sass"
+              "src/styles.css"
             ],
             "server": "src/main.server.ts",
             "outputMode": "server",
@@ -40,7 +35,11 @@
               "entry": "src/server.ts",
               "experimentalPlatform": "neutral"
             },
-            "outputPath": "dist"
+            "outputPath": "dist",
+            "allowedCommonJsDependencies": [
+              "@oc-2/website-breaker",
+              "matter-js"
+            ]
           },
           "configurations": {
             "production": {
@@ -85,7 +84,6 @@
           "builder": "@angular/build:karma",
           "options": {
             "tsConfig": "tsconfig.spec.json",
-            "inlineStyleLanguage": "sass",
             "assets": [
               {
                 "glob": "**/*",
@@ -93,7 +91,7 @@
               }
             ],
             "styles": [
-              "src/styles.sass"
+              "src/styles.css"
             ]
           }
         }
