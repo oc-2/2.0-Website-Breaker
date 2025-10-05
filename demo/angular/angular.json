@@ -2,7 +2,8 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "cli": {
-    "packageManager": "npm"
+    "packageManager": "npm",
+    "analytics": "b429a3f2-a3c4-44c8-8fa8-4dd243c38d0a"
   },
   "newProjectRoot": "projects",
   "projects": {
@@ -14,14 +15,9 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:application",
+          "builder": "@angular/build:application",
           "options": {
-            "outputPath": "dist",
-            "index": "src/index.html",
             "browser": "src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
               {
@@ -33,13 +29,17 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": [],
             "server": "src/main.server.ts",
             "outputMode": "server",
             "ssr": {
               "entry": "src/server.ts",
               "experimentalPlatform": "neutral"
-            }
+            },
+            "outputPath": "dist",
+            "allowedCommonJsDependencies": [
+              "@oc-2/website-breaker",
+              "matter-js"
+            ]
           },
           "configurations": {
             "production": {
@@ -66,7 +66,7 @@
           "defaultConfiguration": "production"
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
               "buildTarget": "website-breaker:build:production"
@@ -78,15 +78,11 @@
           "defaultConfiguration": "development"
         },
         "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n"
+          "builder": "@angular/build:extract-i18n"
         },
         "test": {
-          "builder": "@angular-devkit/build-angular:karma",
+          "builder": "@angular/build:karma",
           "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
             "tsConfig": "tsconfig.spec.json",
             "assets": [
               {
@@ -96,8 +92,7 @@
             ],
             "styles": [
               "src/styles.css"
-            ],
-            "scripts": []
+            ]
           }
         }
       }

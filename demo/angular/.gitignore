@@ -36,6 +36,7 @@ yarn-error.log
 /libpeerconnection.log
 testem.log
 /typings
+__screenshots__/
 
 # System files
 .DS_Store
@@ -43,4 +44,7 @@ Thumbs.db
 
 # wrangler files
 .wrangler
-.dev.vars
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example
