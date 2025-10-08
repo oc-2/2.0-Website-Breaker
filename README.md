@@ -1,6 +1,6 @@
 # 2.0-Website-Breaker
 
-**NOTE**: seyedeliasfakoorian/2.0-Website-Breaker is DEPRECATED, use this repo with npm package instead. **NO INFRIGMENT IN ACTION**
+**NOTE**: seyedeliasfakoorian/2.0-Website-Breaker is **DEPRECATED**, use this repo with npm package instead. **NO INFRIGMENT IN ACTION**
 
 ![](https://res.cloudinary.com/oc2/image/upload/v1759879345/website-breaker.png)
 
@@ -8,7 +8,7 @@
 
 The website breaker is for fun and allows you to simulate a breaking effect on your webpages.
 
-[Here]() is a website you can use for more interactive experience.
+[Here](https://2-0-website-breaker.pages.dev/) is a website you can use for more interactive experience.
 
 ## Installation
 
