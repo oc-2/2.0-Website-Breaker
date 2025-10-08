@@ -16,10 +16,10 @@ jobs:
       packages: write
 
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
         with:
-          node-version: 16.0.2
+          node-version: '16.0.2'
           registry-url: https://npm.pkg.github.com/
       - run: npm ci
       - name: Check if version is already published
