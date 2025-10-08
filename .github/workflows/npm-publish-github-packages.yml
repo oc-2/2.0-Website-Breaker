@@ -14,13 +14,31 @@ jobs:
     permissions:
       contents: read
       packages: write
+
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 16.0.2
           registry-url: https://npm.pkg.github.com/
       - run: npm ci
-      - run: npm publish
+      - name: Check if version is already published
+        id: check_published
+        run: |
+          NAME=$(node -pe "require('./package.json').name")
+          VERSION=$(node -pe "require('./package.json').version")
+          echo "Checking $NAME@$VERSION on registry..."
+          # If npm view returns success, package exists
+          if npm view "$NAME@$VERSION" --registry=https://npm.pkg.github.com/ > /dev/null 2>&1; then
+            echo "published=true" >> "$GITHUB_OUTPUT"
+            echo "Package $NAME@$VERSION already published. Will skip publish."
+          else
+            echo "published=false" >> "$GITHUB_OUTPUT"
+            echo "Package $NAME@$VERSION not found. Will publish."
+          fi
+
+      - name: Publish to GitHub Packages
+        if: steps.check_published.outputs.published == 'false'
+        run: npm publish --registry=https://npm.pkg.github.com/
         env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
