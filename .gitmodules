@@ -1,0 +1,3 @@
+[submodule "demo/vue"]
+	path = demo/vue
+	url = https://github.com/oc-2/website-breaker-demo.git
