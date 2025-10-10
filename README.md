@@ -69,8 +69,8 @@ export const BreakButton = () => {
 
 ```vue
 <template>
-   <div  class="button" @click="destroy" >
-     Destroy the web-page
+   <div class="button" @click="destroy" >
+     Break Me
    </div>
 </template>
 
