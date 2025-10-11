@@ -1,0 +1,33 @@
+name: Update Submodules
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  update-submodules:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          submodules: recursive
+
+      - name: Update submodules
+        run: |
+          git submodule sync --recursive
+          git submodule update --init --recursive
+          git add .
+          
+          # Only commit if there are changes
+          if ! git diff --cached --quiet; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git commit -m "Update submodule(s)"
+            git push origin HEAD:master
+          else
+            echo "No submodule changes to commit."
+          fi
