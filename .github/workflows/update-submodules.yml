@@ -1,33 +1,38 @@
-name: Update Submodules
+name: Update Demo Submodule
 
 on:
-  push:
-    branches:
-      - master
+  repository_dispatch:
+    types: [submodule-update]
 
 jobs:
-  update-submodules:
+  update-submodule:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout main repo
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           submodules: recursive
 
-      - name: Update submodules
+      - name: Pull latest submodule
         run: |
-          git submodule sync --recursive
-          git submodule update --init --recursive
-          git add .
+          cd demo/vue
+          git fetch origin
+          git checkout origin/master
+          cd ../..
           
-          # Only commit if there are changes
+          git add demo/vue
+          echo "Showing submodule diff:"
+          git diff --cached --submodule
+
+      - name: Commit submodule update
+        run: |
           if ! git diff --cached --quiet; then
             git config user.name "github-actions[bot]"
             git config user.email "github-actions[bot]@users.noreply.github.com"
-            git commit -m "Update submodule(s)"
+            git commit -m "Update demo/vue submodule to latest commit"
             git push origin HEAD:master
           else
-            echo "No submodule changes to commit."
+            echo "Submodule already up-to-date."
           fi
