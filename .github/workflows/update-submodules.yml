@@ -18,13 +18,29 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           submodules: true
 
-      - name: Update submodules
+      - name: Update Vue submodule to latest remote commit
         run: |
-          git submodule update --remote --rebase demo/vue
-          git add demo/vue
-          if ! git diff --cached --quiet; then
-            git commit -am 'Auto-update demo/vue submodule'
-            git push origin master
+          echo "Updating demo/vue submodule..."
+          cd demo/vue
+          git fetch origin main || git fetch origin master || true
+
+          # Try main, then fallback to master
+          if git show-ref --verify --quiet refs/remotes/origin/main; then
+            git reset --hard origin/main
           else
-            echo "No submodule updates found."
+            git reset --hard origin/master
+          fi
+
+          cd ../..
+          git add demo/vue
+
+          echo "Checking for submodule changes..."
+          if ! git diff --cached --quiet; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git commit -m "Update demo/vue submodule to latest commit"
+            git push origin HEAD
+            echo "✅ Submodule updated and pushed."
+          else
+            echo "✔ Submodule already up to date."
           fi
