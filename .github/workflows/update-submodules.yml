@@ -20,10 +20,10 @@ jobs:
 
       - name: Update submodules
         run: |
-          git submodule update --remote --merge demo/vue
+          git submodule update --remote --rebase demo/vue
           git add demo/vue
           if ! git diff --cached --quiet; then
-            git commit -m "Auto-update demo/vue submodule"
+            git commit -am 'Auto-update demo/vue submodule'
             git push origin master
           else
             echo "No submodule updates found."
