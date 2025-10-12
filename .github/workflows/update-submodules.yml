@@ -1,4 +1,4 @@
-name: Update Demo Submodule
+name: Update demo/vue Submodule
 on:
   workflow_dispatch: {}
   schedule:
