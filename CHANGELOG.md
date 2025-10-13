@@ -1,3 +1,15 @@
+# [2.0.0](https://github.com/oc-2/2.0-Website-Breaker/compare/v1.2.8...v2.0.0) (2025-10-13)
+
+
+### chore
+
+* **semantic-release:** go from version 1.2.8 ---> 1.2.7 ([c0c99e6](https://github.com/oc-2/2.0-Website-Breaker/commit/c0c99e6178a20e73e0c4293bea4e451b92db8386))
+
+
+### BREAKING CHANGES
+
+* **semantic-release:** Going from version 1.2.8 to 1.2.7
+
 ## [1.2.8](https://github.com/oc-2/2.0-Website-Breaker/compare/v1.2.7...v1.2.8) (2025-10-13)
 
 
