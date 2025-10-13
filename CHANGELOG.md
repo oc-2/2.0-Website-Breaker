@@ -1,3 +1,10 @@
+## [1.2.5](https://github.com/oc-2/2.0-Website-Breaker/compare/v1.2.4...v1.2.5) (2025-10-13)
+
+
+### Bug Fixes
+
+* fixed semantic-release version ([a2996a5](https://github.com/oc-2/2.0-Website-Breaker/commit/a2996a5bbd68d9fc9a0616e5caa6c65e802a2042))
+
 # 1.0.0 (2025-10-13)
 
 
