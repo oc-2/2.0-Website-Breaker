@@ -46,8 +46,12 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         GIT_AUTHOR_NAME: github-actions[bot]
         GIT_AUTHOR_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
+    - name: Before cleanup
+      run: ls -la | grep node_modules || echo "no node_modules before"
+
     - name: Remove node_modules
-      if: always()  # ensures it runs even if previous steps fail
+      if: always()
+      shell: bash
       run: |
         if [ -d "node_modules" ]; then
           rm -rf node_modules
@@ -55,3 +59,6 @@ jobs:
         else
           echo "node_modules not found"
         fi
+
+    - name: After cleanup
+      run: ls -la | grep node_modules || echo "no node_modules after"
