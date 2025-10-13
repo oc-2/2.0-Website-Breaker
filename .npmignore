@@ -3,3 +3,5 @@
 /demo
 /.cache
 /.github
+.gitmodules
+.releaserc.json
