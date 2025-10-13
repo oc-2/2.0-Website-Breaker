@@ -13,21 +13,29 @@ jobs:
   build:
 
     runs-on: ${{ matrix.os }}
+    if: ${{ github.ref == 'refs/heads/main' }}
 
     strategy:
       matrix:
         node-version: [20.x, 22.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-        os: [ubuntu-latest]
+        os: [ubuntu-latest, windows-latest]
 
     steps:
     - uses: actions/checkout@v4
       with:
         fetch-depth: 0
-    - name: Use Node.js ${{ matrix.node-version }}
+    - name: Use Node.js enviroment
       uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
+    - name: Cache node_modules
+      uses: actions/cache@v3
+      with:
+        path: node_modules
+        key: ${{ runner.os }}-node-${{ matrix.node-version }}-${{ hashFiles('package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-node-${{ matrix.node-version }}-
     - run: npm ci
     - name: Sync with master
       run: |
@@ -37,4 +45,12 @@ jobs:
       env:
         NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    - run: rm -r node_modules
+    - name: Remove node_modules
+      if: always()  # ensures it runs even if previous steps fail
+      run: |
+        if [ -d "node_modules" ]; then
+          rm -rf node_modules
+          echo "node_modules removed"
+        else
+          echo "node_modules not found"
+        fi
