@@ -22,11 +22,17 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
+    - name: Sync with master
+      run: |
+        git fetch origin master
+        git pull --rebase origin master || true
     - run: npm run semantic-release
       env:
         NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
