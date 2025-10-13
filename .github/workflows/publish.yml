@@ -46,13 +46,3 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         GIT_AUTHOR_NAME: github-actions[bot]
         GIT_AUTHOR_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
-    - name: Remove node_modules
-      if: always()
-      shell: bash
-      run: |
-        if [ -d "node_modules" ]; then
-          rm -rf node_modules
-          echo "node_modules removed"
-        else
-          echo "node_modules not found"
-        fi
