@@ -1,3 +1,10 @@
+## [1.2.7](https://github.com/oc-2/2.0-Website-Breaker/compare/v1.2.6...v1.2.7) (2025-10-13)
+
+
+### Bug Fixes
+
+* **actions:** remove if: ${{ github.ref == 'refs/heads/main' }} ([0162a86](https://github.com/oc-2/2.0-Website-Breaker/commit/0162a8682445bd5b6280056bebf419924e9b47e1))
+
 ## [1.2.6](https://github.com/oc-2/2.0-Website-Breaker/compare/v1.2.5...v1.2.6) (2025-10-13)
 
 
