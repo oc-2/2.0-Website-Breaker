@@ -1,3 +1,10 @@
+## [1.2.6](https://github.com/oc-2/2.0-Website-Breaker/compare/v1.2.5...v1.2.6) (2025-10-13)
+
+
+### Bug Fixes
+
+* publish.yml ([2ee14a7](https://github.com/oc-2/2.0-Website-Breaker/commit/2ee14a7a718a15f2e9b8918d5478100c988655b4))
+
 ## [1.2.5](https://github.com/oc-2/2.0-Website-Breaker/compare/v1.2.4...v1.2.5) (2025-10-13)
 
 
