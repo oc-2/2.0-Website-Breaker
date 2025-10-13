@@ -5,13 +5,6 @@
 
 * **node_modules:** removed node_modules ([961c537](https://github.com/oc-2/2.0-Website-Breaker/commit/961c537e49635a5e7755e9bc8afb2e785be6bf8e))
 
-## [1.2.8](https://github.com/oc-2/2.0-Website-Breaker/compare/v1.2.7...v1.2.8) (2025-10-13)
-
-
-### Performance Improvements
-
-* **node_modules:** removed node_modules ([961c537](https://github.com/oc-2/2.0-Website-Breaker/commit/961c537e49635a5e7755e9bc8afb2e785be6bf8e))
-
 ## [1.2.7](https://github.com/oc-2/2.0-Website-Breaker/compare/v1.2.6...v1.2.7) (2025-10-13)
 
 
