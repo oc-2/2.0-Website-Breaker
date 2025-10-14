@@ -32,7 +32,7 @@ document.getElementById("dangerous-button")
 ```
 
 ```html
-// index.html
+<!-- index.html -->
 
 <!DOCTYPE html>
 <html>
@@ -50,6 +50,7 @@ document.getElementById("dangerous-button")
 The following button will break the webpage-apart whenever its clicked.
 
 ```js
+// src/compontents/breakButton.jsx
 import breakWebPage from "@oc-2/website-breaker";
 
 export const BreakButton = () => {
@@ -69,6 +70,7 @@ export const BreakButton = () => {
 
 ```vue
 <template>
+    <!-- components/breakButton.vue -->
    <div class="button" @click="destroy" >
      Break Me
    </div>
@@ -92,8 +94,10 @@ export default defineComponent({
 });
 </script>
 ```
+### Angular
+[Here](demo/angular/src/app/break-button/) is the component where the angular demo relies in.
 
 ## Others
-While we only presented examples for vue and react, website-breaker is framework independent and would likely work with all of them.
+While we only presented examples for vue, react, and angular website-breaker is framework independent and would likely work with all of them.
 
 The website breaker can also be used by the [extension](https://chrome.google.com/webstore/detail/website-breaker/kehlflmgfbkjncaoogcangeeejhbgfnm)
