@@ -29,7 +29,6 @@ jobs:
     - uses: actions/checkout@v4
       with:
         fetch-depth: 0
-        persist-credentials: false
     - name: Use Node.js version ${{ matrix.node-version }}
       uses: actions/setup-node@v4
       with:
