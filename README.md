@@ -51,6 +51,7 @@ The following button will break the webpage-apart whenever its clicked.
 
 ```js
 // src/compontents/breakButton.jsx
+
 import breakWebPage from "@oc-2/website-breaker";
 
 export const BreakButton = () => {
