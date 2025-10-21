@@ -1,3 +1,10 @@
+## [2.0.1](https://github.com/oc-2/2.0-Website-Breaker/compare/v2.0.0...v2.0.1) (2025-10-21)
+
+
+### Bug Fixes
+
+* **semantic-release:** added a closing bracket ([16fc4dc](https://github.com/oc-2/2.0-Website-Breaker/commit/16fc4dc48aaac5fdc84ab894e4e956665537697c))
+
 # [2.0.0](https://github.com/oc-2/2.0-Website-Breaker/compare/v1.2.8...v2.0.0) (2025-10-13)
 
 
