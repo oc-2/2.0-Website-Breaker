@@ -1,3 +1,10 @@
+## [2.0.2](https://github.com/oc-2/2.0-Website-Breaker/compare/v2.0.1...v2.0.2) (2025-10-31)
+
+
+### Bug Fixes
+
+* upgrade @oc-2/website-breaker from 1.2.3 to 1.2.4 ([721abb0](https://github.com/oc-2/2.0-Website-Breaker/commit/721abb057a3dad77964b9d678e9d00b46927190a))
+
 ## [2.0.1](https://github.com/oc-2/2.0-Website-Breaker/compare/v2.0.0...v2.0.1) (2025-10-21)
 
 
