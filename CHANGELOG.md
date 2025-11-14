@@ -1,3 +1,10 @@
+## [2.0.3](https://github.com/oc-2/2.0-Website-Breaker/compare/v2.0.2...v2.0.3) (2025-11-14)
+
+
+### Bug Fixes
+
+* demo/angular/package.json & demo/angular/package-lock.json to reduce vulnerabilities ([58eb7cb](https://github.com/oc-2/2.0-Website-Breaker/commit/58eb7cbfe46af65ef31ab5e336de0f6efa27d0a9))
+
 ## [2.0.2](https://github.com/oc-2/2.0-Website-Breaker/compare/v2.0.1...v2.0.2) (2025-10-31)
 
 
