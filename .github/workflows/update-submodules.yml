@@ -1,13 +1,26 @@
 name: Update demo/vue Submodule
+
 on:
   workflow_dispatch: {}
-  schedule:
-    - cron: "0 */8 * * *"
+  repository_dispatch:
+    types: [vue-updated]
 
+concurrency:
+  group: update-submodule-${{ github.ref }}
+  cancel-in-progress: true
+  
 jobs:
-  update-submodules:
+  update-submodule:
     runs-on: ubuntu-latest
+    # Adjust timeout based on how long this job usually takes. Default is 360.
     timeout-minutes: 360
+
+    # Only run repository_dispatch events that target the tracked ref/branch.
+    # Allow workflow_dispatch and schedule to run without a client_payload check.
+    if: >
+      github.event_name != 'repository_dispatch'
+      || (github.event_name == 'repository_dispatch' && github.event.client_payload.ref == 'refs/heads/main')
+    
     permissions:
       contents: write
 
