@@ -29,7 +29,7 @@
     "cloudflare"
   ],
   "dependencies": {
-    "commitizen": "^4.3.1",
+    "commitizen": "^4.3.2",
     "html2canvas": "^1.4.1",
     "matter-js": "^0.20.0"
   },
